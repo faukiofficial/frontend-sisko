@@ -93,7 +93,13 @@ const Search: React.FC<SearchProps> = ({
           </div>
         )}
 
-        <IoClose className="text-red-500 text-2xl absolute -top-4 right-0 cursor-pointer hover:text-red-600 rounded-full hover:bg-red-100" onClick={() => setSearchOpen(false)} />
+        <IoClose
+          className="text-red-500 text-2xl absolute -top-4 right-0 cursor-pointer hover:text-red-600 rounded-full hover:bg-red-100"
+          onClick={() => {
+            setSearchOpen(false);
+            setSearchQuery("");
+          }}
+        />
       </div>
     </div>
   );
